@@ -12,5 +12,5 @@ docker push reguero/multi-worker:$SHA
 
 kubectl apply -f k8s
 kubectl set image deployments/server-deployment server=reguero/multi-server:$SHA
-kubectl set image deployments/client-deployment server=reguero/multi-client:$SHA
-kubectl set image deployments/worker-deployment server=reguero/multi-worker:$SHA
+kubectl set image deployments/client-deployment client=reguero/multi-client:$SHA
+kubectl set image deployments/worker-deployment worker=reguero/multi-worker:$SHA
